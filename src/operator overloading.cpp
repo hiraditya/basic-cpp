@@ -12,7 +12,7 @@ class Complex
     }
     Complex operator +(Complex c)
     {
-      Complex ans(this->re+c.re,this->re+c.re);
+      Complex ans(this->re+c.re,this->im+c.im);
       return ans;
     }
     void print()
@@ -23,8 +23,6 @@ class Complex
 
 int main() {
   Complex c1(2,3),c2(3,2);
-  c1.print();
-  c2.print();
   Complex result = c1+c2;
   result.print();
   return 0;

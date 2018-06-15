@@ -1,14 +1,15 @@
 #include <iostream>
 #include <fstream>
+#include <string.h>
 using namespace std;
 
 int main() {
+  string msg;
   ofstream fout("log.txt",ios::app);
-  string msg = "Welcome to Hindisiksha";
+  msg = "Welcome to Hindisiksha\nHere we learn ad grow";
   fout<<msg;
   fout.close();
   ifstream fin("log.txt");
-  string msg;
   while(!fin.eof())
   {
     fin>>msg;
